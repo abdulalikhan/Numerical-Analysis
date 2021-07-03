@@ -1,0 +1,14 @@
+{% include 'header.html' %}
+
+{% block content %}
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">{{name}} - Result</h1>
+		{% for result in results %}
+        <p class="lead">
+          {{result.name}} = {{result.value}}
+        </p>
+		{% endfor %}
+      </main>
+{% endblock %}
+
+{% include 'footer.html' %}

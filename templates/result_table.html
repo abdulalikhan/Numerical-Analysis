@@ -1,0 +1,28 @@
+{% include 'header.html' %}
+
+{% block content %}
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">{{name}} - Result</h1>
+		<table class="table table-dark">
+		  <thead>
+			<tr>
+			  {% for heading in headings %}
+			  <th scope="col">{{heading}}</th>
+			  {% endfor %}
+			</tr>
+		  </thead>
+		  <tbody>
+		    {% for row in data %}
+			<tr>
+			  
+				  {% for column in row %}
+					<td>{{column}}</td>
+				  {% endfor %}
+			</tr>
+			{% endfor %}
+		  </tbody>
+		</table>
+      </main>
+{% endblock %}
+
+{% include 'footer.html' %}

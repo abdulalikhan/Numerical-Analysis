@@ -1,0 +1,26 @@
+{% include 'header.html' %}
+
+{% block content %}
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">{{name}}</h1>
+		<form action="result" method="post">
+		  {% csrf_token %}
+		  <div class="form-group">
+			<label for="method">Method:</label>
+		    <select class="custom-select custom-select-lg mb-3" name="method" id="method">
+			  {% for method in methods %}
+				<option value="{{method.name}}">{{method.name}}</option>
+			  {% endfor %}
+	        </select>
+		  {% for field in fields %}
+		  <div class="form-group">
+			<label for="{{field.name}}">Enter {{field.value}}:</label>
+			<input type="text" class="form-control" id="{{field.name}}" name="{{field.name}}" placeholder="Enter {{field.value}}">
+		  </div>
+		  {% endfor %}
+		  <button type="submit" class="btn btn-primary">Solve</button>
+	    </form>
+      </main>
+{% endblock %}
+
+{% include 'footer.html' %}

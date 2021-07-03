@@ -1,0 +1,35 @@
+{% include 'header.html' %}
+
+{% block content %}
+      <main role="main" class="inner cover">
+        <h1 class="cover-heading">Numerical Analysis Web App</h1>
+        <p class="lead">
+          A numerical analysis web application built with Django, Python, and
+          Bootstrap.
+        </p>
+        <p class="lead">
+          Currently supports 13 different numerical methods which can be used to
+          perform the following operations:
+        </p>
+        <p class="lead">
+          <a href="numerical_integration/" class="btn btn-lg btn-secondary">Numerical Integration</a>
+        </p>
+        <p class="lead">
+          <a href="numerical_differentiation/" class="btn btn-lg btn-secondary"
+            >Numerical Differentiation</a
+          >
+        </p>
+        <p class="lead">
+          <a href="solve_non_linear_eqs/" class="btn btn-lg btn-secondary"
+            >Solve Non-Linear Equations</a
+          >
+        </p>
+        <p class="lead">
+          <a href="solve_odes/" class="btn btn-lg btn-secondary"
+            >Solve Ordinary Differential Equations</a
+          >
+        </p>
+      </main>
+{% endblock %}
+
+{% include 'footer.html' %}
